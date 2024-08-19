@@ -21,5 +21,5 @@ from calculate_url.views import main_view, calculate_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_view),
-    path('calculate/', calculate_view)
+    path('calculate/<str:operation>/<int:a>/<int:b>/', calculate_view),
 ]

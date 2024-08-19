@@ -5,13 +5,12 @@ from django.http import HttpResponse
 def main_view(request):
     return render(request, 'index.html')
 
-def calculate_view(request, operation, num1, num2):
-    num1, num2 = int(num1, num2)
+def calculate_view(request, operation, a, b):
     if operation == 'add':
-        return HttpResponse(num1 + num2)
+        return HttpResponse(a + b)
     elif operation == 'subtract':
-        return HttpResponse(num1 - num2)
+        return HttpResponse(a - b)
     elif operation == 'multiply':
-        return HttpResponse(num1 * num2)
+        return HttpResponse(a * b)
     elif operation == 'divide':
-        return HttpResponse(num1 / num2)
+        return HttpResponse(a / b)
